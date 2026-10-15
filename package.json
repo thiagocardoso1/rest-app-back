@@ -1,0 +1,30 @@
+{
+    "name": "rest-app-back",
+    "version": "1.0.0",
+    "description": "RestAPI application developed with NodeJS for Udemy course.",
+    "homepage": "https://github.com/thiagocardoso1/rest-app-back#readme",
+    "bugs": {
+        "url": "https://github.com/thiagocardoso1/rest-app-back/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thiagocardoso1/rest-app-back.git"
+    },
+    "license": "MIT",
+    "author": "Thiago Cardoso",
+    "type": "module",
+    "main": "index.ts",
+    "scripts": {
+        "dev": "tsx watch src/app.ts",
+        "start": "node dist/app.js"
+    },
+    "devDependencies": {
+        "dotenv": "17.4.2",
+        "tsx": "4.22.4",
+        "typescript": "^7.0.0"
+    },
+    "dependencies": {
+        "express": "^5.3.0",
+        "express-session": "^1.19.0"
+    }
+}
