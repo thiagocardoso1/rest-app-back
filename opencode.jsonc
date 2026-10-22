@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "references": {
+    "front": {
+      "path": "../rest-app-front",
+      "description": "Frontend Angular (rest-app-front): componentes e modelos que consomem a API. Consulte antes de mudar rota, payload ou status code."
+    }
+  },
+  "instructions": ["docs/api-contract.md"]
+}
