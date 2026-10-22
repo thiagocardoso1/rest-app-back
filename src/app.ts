@@ -1,6 +1,6 @@
 import express from "express";
 import { Request, Response, NextFunction } from "express";
-import { feedRouter } from "./routes/feed";
+import { feedRouter } from "../routes/feed";
 
 const app = express();
 
