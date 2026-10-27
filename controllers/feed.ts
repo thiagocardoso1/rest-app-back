@@ -1,27 +1,14 @@
 import { Request, Response, NextFunction } from "express";
+import { prisma } from "../utils/database";
 
 export class feedController {
-    static getPosts = (req: Request, res: Response, next: NextFunction) => {
-        res.status(200).json({
-            posts: [
-                {
-                    id: 1,
-                    title: "Primeiro post",
-                    imageUrl: "https://picsum.photos/seed/1/640/320",
-                    content: "Conteudo curto do post para visualizacao inicial da estrutura. Expanda para ver mais.",
-                    author: "Thigas",
-                    createdAt: "15/10/2026",
-                },
-                {
-                    id: 2,
-                    title: "Segundo post",
-                    imageUrl: "https://picsum.photos/seed/2/640/320",
-                    content: "Outro conteudo de exemplo para validar layout, espacamento e botoes de acao.",
-                    author: "Rest App",
-                    createdAt: "14/10/2026",
-                },
-            ],
-        });
+    static getPosts = async (req: Request, res: Response, next: NextFunction) => {
+        try {
+            const posts = await prisma.post.findMany();
+            res.json({ posts });
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     static createPost = (req: Request, res: Response, next: NextFunction) => {
