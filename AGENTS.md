@@ -38,6 +38,10 @@ O contrato completo (campos, tipos e exemplos) está em `docs/api-contract.md`, 
 - O front consome **apenas** `GET /feed/posts` (`src/app/services/posts.ts`), esperando `{ posts: Post[] }` com campos não-nulos; `POST /feed/post` ainda não tem consumidor no front.
 - Datas trafegam como string `dd/mm/aaaa`, não ISO 8601.
 
+## Decisões (ADRs)
+
+- Decisões arquiteturais em `docs/adr/` (ADR-0001 a ADR-0004): persistência/Prisma, identidades de banco, client/modelo/fuso e validação/erros.
+
 ## Convenções
 
 - ESM (`"type": "module"`): use `import`/`export`, como no código existente.
