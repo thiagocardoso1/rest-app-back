@@ -16,7 +16,7 @@ datasource db {
 
 model Post {
     id        Int      @id @default(autoincrement())
-    title     String
+    title     String   @db.VarChar(50)
     imageUrl  String   @default("https://picsum.photos/seed/1/640/320")
     content   String
     author    String   @default("Thigas")
