@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "bundler", // aceita import relativo sem extensão, como o seu código já é
+        "target": "ES2023",
+        "lib": [
+            "ES2023"
+        ],
+        "types": [
+            "node"
+        ],
+        "noEmit": true,
+        "allowImportingTsExtensions": true, // obrigatório: o client gerado importa ".ts"
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "verbatimModuleSyntax": true
+    },
+    "include": [
+        "src",
+        "controllers",
+        "routes",
+        "models",
+        "utils",
+        "prisma7.config.ts"
+    ]
+}
