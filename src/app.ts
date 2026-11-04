@@ -1,6 +1,7 @@
 import express from "express";
-import { Request, Response, NextFunction } from "express";
+import type { Request, Response, NextFunction } from "express";
 import { feedRouter } from "../routes/feed";
+import { errorController } from "../controllers/error";
 
 const app = express();
 
@@ -15,4 +16,6 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 });
 
 app.use("/feed", feedRouter);
+app.use(errorController.errorHandler);
+
 app.listen(8080);
